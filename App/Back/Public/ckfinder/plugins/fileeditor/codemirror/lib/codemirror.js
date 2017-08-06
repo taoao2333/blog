@@ -1,4 +1,4 @@
-// This is CodeMirror (http://codemirror.net), a code editor
+﻿// This is CodeMirror (http://codemirror.net), a code editor
 // implemented in JavaScript on top of the browser's DOM.
 //
 // You can find some technical background for some of the code below

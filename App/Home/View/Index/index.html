@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="ibody">
-{include file="../Public/header.html"}
+  {include file='../Public/header.html'}
   <article>
     <div class="banner">
       <ul class="texts">
@@ -27,7 +27,7 @@
       <h2>
         <p><span>推荐</span>文章</p>
       </h2>
-	 {foreach from=$recommendArt item='row'}
+      {foreach from=$recommendArt item='row'}
       <div class="blogs">
         <h3><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></h3>
         <figure><img src="/Uploads/thumb/{$row.thumb|truncate:8:NULL}/{$row.thumb}" ></figure>
@@ -38,12 +38,7 @@
         <p class="autor"><span>作者：{$row.author}</span><span>分类：【<a href="/">{$row.cate_name}</a>】</span><span>浏览（<a href="/">{$row.hits}</a>）</span><span>评论（<a href="/">30</a>）</span></p>
         <div class="dateview">{$row.addtime|date_format:'%Y-%m-%d'}</div>
       </div>
-    {foreachelse}
-    <div class="blogs">
-    	暂未查询到推荐文章……
-    </div>
-  	{/foreach}
-      
+      {/foreach}
     </div>
   </article>
   <aside>
@@ -68,19 +63,18 @@
         <p class="tj_t1">最新文章</p>
       </h2>
       <ul>
-      {foreach from=$newArt item='row'}
+        {foreach from=$newArt item='row'}
         <li><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></li>
-      {/foreach}
+        {/foreach}
       </ul>
       <h2>
         <p class="tj_t2">推荐文章</p>
       </h2>
       <ul>
-      {foreach from=$rmdArtByHits item='row'}
+        {foreach from=$rmdArtByHits item='row'}
         <li><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></li>
-      {/foreach}
+        {/foreach}
       </ul>
-
     </div>
     <div class="links">
       <h2>

@@ -1,4 +1,4 @@
-(function(mod) {
+﻿(function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
     mod(require("../../lib/codemirror"), require("../xml/xml"), require("../javascript/javascript"), require("../css/css"));
   else if (typeof define == "function" && define.amd) // AMD

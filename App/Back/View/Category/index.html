@@ -1,5 +1,5 @@
 {include file='../Public/header.html'}
-<literal>
+{literal}
 <script>
 	//定义页面载入事件
 	$(function(){
@@ -10,16 +10,15 @@
 		});
 	});
 </script>
-</literal>
+{/literal}
 <div class="admin">
-	<form method="post" action="index.php?p=Back&c=Category&a=delAll">
+	<form method="POST" action='index.php?p=Back&c=Category&a=delAll'>
     <div class="panel admin-panel">
     	<div class="panel-head"><strong>分类列表</strong></div>
         <div class="padding border-bottom">
             <input type="button" class="button button-small checkall" name="checkall" checkfor="cate_id[]" value="全选" />
             <input type="button" id="btnAdd" class="button button-small border-green" value="添加分类" />
-            <input type="submit" class="button button-small border-yellow" value="批量删除" onclick="return confirm('确认要批量删除当前分类吗？')"/>
-            <input type="button" class="button button-small border-blue" value="回收站" />
+            <input type="submit" class="button button-small border-yellow" value="批量删除" onclick="return confirm('确认批量删除当前分类吗?');"/>
         </div>
         <table class="table table-hover">
 		     <tr>
@@ -34,10 +33,10 @@
                 <td><input type="checkbox" name="cate_id[]" value="{$row.cate_id}" /></td>
                 <td>{$row.cate_pid}</td>
                 <td>{$row.cate_name|indent:($row.level*5):'-'}</td>
-                <td>{$row.cate_desc|truncate:15}</td>
+                <td>{$row.cate_desc|truncate:25}</td>
                 <td>
                     <a class="button border-blue button-little" href="index.php?p=Back&c=Category&a=edit&cate_id={$row.cate_id}">修改</a> 
-                    <a class="button border-yellow button-little" href="index.php?p=Back&c=Category&a=del&cate_id={$row.cate_id}" onclick="return confirm('确认要删除当前分类吗？')">删除</a>
+                    <a class="button border-yellow button-little" href="index.php?p=Back&c=Category&a=del&cate_id={$row.cate_id}" onclick="return confirm('确认删除当前分类吗?');">删除</a>
                 </td>
             </tr>
             {/foreach}

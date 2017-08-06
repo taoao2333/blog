@@ -1,4 +1,4 @@
-// TODO actually recognize syntax of TypeScript constructs
+﻿// TODO actually recognize syntax of TypeScript constructs
 
 (function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS

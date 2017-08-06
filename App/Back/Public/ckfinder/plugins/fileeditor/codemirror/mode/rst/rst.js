@@ -1,4 +1,4 @@
-(function(mod) {
+﻿(function(mod) {
   if (typeof exports == "object" && typeof module == "object") // CommonJS
     mod(require("../../lib/codemirror"), require("../python/python"), require("../stex/stex"), require("../../addon/mode/overlay"));
   else if (typeof define == "function" && define.amd) // AMD

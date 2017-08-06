@@ -10,9 +10,9 @@
 		});
 	});
     $(function(){
-        //获取btnRecycle按钮
+        //获取btnAdd按钮
         $('#btnRecycle').bind('click',function(){
-            // 设置“回收站”链接
+            // 设置“添加文章”链接
             window.location.href = 'index.php?p=Back&c=Article&a=recycle';
         });
     });
@@ -25,7 +25,7 @@
         <div class="padding border-bottom">
             <input type="button" class="button button-small checkall" name="checkall" checkfor="art_id[]" value="全选" />
             <input type="button" id="btnAdd" class="button button-small border-green" value="添加文章" />
-            <input type="submit" class="button button-small border-yellow"  value="批量删除" onclick="return confirm('确定要删除吗？')" />
+            <input type="submit" class="button button-small border-yellow"  value="批量删除" onclick="return confirm('确实要批量删除吗?');" />
             <input type="button" id="btnRecycle" class="button button-small border-blue" value="回收站" />
         </div>
         <table class="table table-hover">
@@ -42,25 +42,25 @@
             <tr>
                 <td><input type="checkbox" name="art_id[]" value="{$row.art_id}" /></td>
                 <td>{$row.cate_name}</td>
-                <td>{$row.title|truncate:10}</td>
+                <td>{$row.title}</td>
                 <td>{$row.hits}</td>
                 <td>{$row.addtime|date_format:'%Y-%m-%d %H:%M:%S'}</td>
                 <td>
                     {if $row.is_recommend == '1'}
                     <a class="button border-yellow button-little" href="index.php?p=Back&c=Article&a=ifRecommend&art_id={$row.art_id}&is_recommend={$row.is_recommend}&pageNum={$smarty.get.pageNum|default:1}">已推荐</a>
                     {else}
-                    <a class="button border-blue button-little" href="index.php?p=Back&c=Article&a=ifRecommend&art_id={$row.art_id}&is_recommend={$row.is_recommend}&pageNum={$smarty.get.pageNum|default:1}">未推荐</a>
+                    <a class="button border-blue button-little" href="index.php?p=Back&c=Article&a=ifRecommend&art_id={$row.art_id}&is_recommend={$row.is_recommend}&pageNum={$smarty.get.pageNum|default:1}">未推荐</a> 
                     {/if}
                 </td>
                 <td>
                     <a class="button border-blue button-little" href="index.php?p=Back&c=Article&a=edit&art_id={$row.art_id}">修改</a> 
-                    <a class="button border-yellow button-little" href="index.php?p=Back&c=Article&a=del&art_id={$row.art_id}" onclick="return confirm('确定要删除吗？')">删除</a>
+                    <a class="button border-yellow button-little" href="index.php?p=Back&c=Article&a=del&art_id={$row.art_id}" onclick="return confirm('确实删除吗?');">删除</a>
                 </td>
             </tr>
             {/foreach}
         </table>
 		<div class="panel-foot text-center">
-           {$strPage}
+            {$strPage}
         </div>
     </div>
     </form>

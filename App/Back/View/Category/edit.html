@@ -3,12 +3,12 @@
   <div class="tab">
     <div class="tab-head"> <strong>分类管理</strong>
       <ul class="tab-nav">
-        <li class="active"><a href="#tab-set">添加分类</a></li>
+        <li class="active"><a href="#tab-set">修改分类</a></li>
       </ul>
     </div>
     <div class="tab-body"> <br />
       <div class="tab-panel active" id="tab-set">
-        <form method="post" class="form-x" action="index.php?p=Back&c=Category&a=dealEdit">
+        <form method="POST" class="form-x" action="index.php?p=Back&c=Category&a=dealEdit">
           <div class="form-group">
             <div class="label">
               <label for="sitename">分类名称</label>
@@ -23,10 +23,12 @@
             </div>
             <div class="field">
               <select class="select" name="cate_pid">
-              	  <option value="0">主类别</option {if $row.cate_id == $cate.cate_pid}selected="selected"{/if}>
+              	  	<option value="0">主类别</option>
               	  {foreach from=$cateInfo item='row'}
-                  <option value="{$row.cate_id}">{$row.cate_name|indent:($row.level*5):'-'}</option>
-                  {/foreach}
+              	  	<option value="{$row.cate_id}"
+              	  		{if $row.cate_id == $cate.cate_pid}selected="selected"{/if}
+              	  	>{$row.cate_name|indent:($row.level*5):'-'}</option>
+              	  {/foreach}
               </select>
             </div>
           </div>
@@ -47,7 +49,7 @@
             </div>
           </div>
           <div class="form-button">
-          <input type="hidden" name="cate_id" value="{$cate.cate_id}">
+          	<input type="hidden" name="cate_id" value="{$cate.cate_id}">
             <button class="button bg-main" type="submit">提交</button>
           </div>
         </form>

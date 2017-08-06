@@ -10,19 +10,20 @@
 <link href="{$smarty.const.CSS_DIR}/media.css" rel="stylesheet">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
 <!--[if lt IE 9]>
-<script src="{$smarty.const.JS_DIR}/modernizr.js"></script>
+<script src="js/modernizr.js"></script>
 <![endif]-->
 </head>
 <body>
 <div class="ibody">
-{include file='../Public/header.html'}
+  {include file='../Public/header.html'}
   <article>
     <h3 class="about_h">您现在的位置是：<a href="/">首页</a>><a href="index.php?p=Home&c=SinglePage&a=index&page_id=2">关于我</a></h3>
     <div class="about">
-      {$pageInfo.content}
+    {$pageInfo.content}
+    </div>
   </article>
   <aside>
-    <div class="avatar"><a href="about.html"><span>关于{$masterInfo.nickname}</span></a></div>
+    <div class="avatar"><a href="about.html"><span>关于杨青</span></a></div>
     <div class="topspaceinfo">
       <h1>执子之手，与子偕老</h1>
       <p>于千万人之中，我遇见了我所遇见的人....</p>
@@ -42,7 +43,7 @@
       </ul>
     </div>
   </aside>
-  <script src="{$smarty.const.JS_DIR}/silder.js"></script>
+  <script src="js/silder.js"></script>
   <div class="clear"></div>
   <!-- 清除浮动 --> 
 </div>

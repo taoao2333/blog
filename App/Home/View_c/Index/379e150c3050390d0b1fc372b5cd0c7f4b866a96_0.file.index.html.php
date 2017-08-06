@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-05-16 08:29:13
+/* Smarty version 3.1.29, created on 2017-05-27 19:38:46
   from "E:\blog\App\Home\View\Index\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_591a47d9f3bd88_19045568',
+  'unifunc' => 'content_592965460d7961_95635189',
   'file_dependency' => 
   array (
     '379e150c3050390d0b1fc372b5cd0c7f4b866a96' => 
     array (
       0 => 'E:\\blog\\App\\Home\\View\\Index\\index.html',
-      1 => 1494894488,
+      1 => 1494236011,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:../Public/header.html' => 1,
   ),
 ),false)) {
-function content_591a47d9f3bd88_19045568 ($_smarty_tpl) {
+function content_592965460d7961_95635189 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_truncate')) require_once 'E:/blog/Vendor/Smarty/plugins\\modifier.truncate.php';
 if (!is_callable('smarty_modifier_date_format')) require_once 'E:/blog/Vendor/Smarty/plugins\\modifier.date_format.php';
 ?>
@@ -47,7 +47,7 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:/blog/Vendor/Sm
 </head>
 <body>
 <div class="ibody">
-<?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../Public/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+  <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:../Public/header.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
   <article>
@@ -61,7 +61,7 @@ if (!is_callable('smarty_modifier_date_format')) require_once 'E:/blog/Vendor/Sm
       <h2>
         <p><span>推荐</span>文章</p>
       </h2>
-	 <?php
+      <?php
 $_from = $_smarty_tpl->tpl_vars['recommendArt']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -93,21 +93,13 @@ $__foreach_row_0_saved_local_item = $_smarty_tpl->tpl_vars['row'];
         <div class="dateview"><?php echo smarty_modifier_date_format($_smarty_tpl->tpl_vars['row']->value['addtime'],'%Y-%m-%d');?>
 </div>
       </div>
-    <?php
+      <?php
 $_smarty_tpl->tpl_vars['row'] = $__foreach_row_0_saved_local_item;
-}
-if (!$_smarty_tpl->tpl_vars['row']->_loop) {
-?>
-    <div class="blogs">
-    	暂未查询到推荐文章……
-    </div>
-  	<?php
 }
 if ($__foreach_row_0_saved_item) {
 $_smarty_tpl->tpl_vars['row'] = $__foreach_row_0_saved_item;
 }
 ?>
-      
     </div>
   </article>
   <aside>
@@ -139,7 +131,7 @@ $_smarty_tpl->tpl_vars['row'] = $__foreach_row_0_saved_item;
         <p class="tj_t1">最新文章</p>
       </h2>
       <ul>
-      <?php
+        <?php
 $_from = $_smarty_tpl->tpl_vars['newArt']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -154,7 +146,7 @@ $__foreach_row_1_saved_local_item = $_smarty_tpl->tpl_vars['row'];
         <li><a href="index.php?p=Home&c=Article&a=show&art_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['art_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['title'];?>
 </a></li>
-      <?php
+        <?php
 $_smarty_tpl->tpl_vars['row'] = $__foreach_row_1_saved_local_item;
 }
 if ($__foreach_row_1_saved_item) {
@@ -166,7 +158,7 @@ $_smarty_tpl->tpl_vars['row'] = $__foreach_row_1_saved_item;
         <p class="tj_t2">推荐文章</p>
       </h2>
       <ul>
-      <?php
+        <?php
 $_from = $_smarty_tpl->tpl_vars['rmdArtByHits']->value;
 if (!is_array($_from) && !is_object($_from)) {
 settype($_from, 'array');
@@ -181,7 +173,7 @@ $__foreach_row_2_saved_local_item = $_smarty_tpl->tpl_vars['row'];
         <li><a href="index.php?p=Home&c=Article&a=show&art_id=<?php echo $_smarty_tpl->tpl_vars['row']->value['art_id'];?>
 "><?php echo $_smarty_tpl->tpl_vars['row']->value['title'];?>
 </a></li>
-      <?php
+        <?php
 $_smarty_tpl->tpl_vars['row'] = $__foreach_row_2_saved_local_item;
 }
 if ($__foreach_row_2_saved_item) {
@@ -189,7 +181,6 @@ $_smarty_tpl->tpl_vars['row'] = $__foreach_row_2_saved_item;
 }
 ?>
       </ul>
-
     </div>
     <div class="links">
       <h2>
@@ -212,6 +203,5 @@ $_smarty_tpl->tpl_vars['row'] = $__foreach_row_2_saved_item;
   <!-- 清除浮动 --> 
 </div>
 </body>
-</html>
-<?php }
+</html><?php }
 }

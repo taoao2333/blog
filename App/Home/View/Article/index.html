@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="ibody">
-  {include file='../Public/header.html'}
+	{include file='../Public/header.html'}
   <article>
     <h2 class="about_h">您现在的位置是：<a href="/">首页</a>
     {foreach from=$list item='row' key='key'}
@@ -23,7 +23,7 @@
     {/foreach}
     </h2>
     <div class="bloglist">
-    {foreach from=$artInfo item='row'}
+    	{foreach from=$artInfo item='row'}
       <div class="newblog">
         <ul>
           <h3><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></h3>
@@ -33,9 +33,9 @@
         <figure><img src="/Uploads/thumb/{$row.thumb|truncate:8:NULL}/{$row.thumb}" ></figure>
         <div class="dateview">{$row.addtime|date_format:'%Y-%m-%d'}</div>
       </div>
-      {/foreach}
+      	{/foreach}
     </div>
-    <div class="page"><a href="/">{$strPage}</a></div>
+    <div class="page">{$strPage}</div>
   </article>
   {include file='../Public/aside.html'}
   <script src="{$smarty.const.JS_DIR}/silder.js"></script>

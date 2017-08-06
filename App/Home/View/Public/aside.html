@@ -1,7 +1,7 @@
-<aside>
-    <div class="rnav">\
+  <aside>
+    <div class="rnav">
     {foreach from=$subCate item='row' name='n1'}
-      <li class="rnav{$smarty.foreach.n1.index % 4+1} "><a href="index.php?p=Home&c=Article&a=index&cate_id={$row.cate_id}">{$row.cate_name}</a></li>
+      <li class="rnav{$smarty.foreach.n1.index % 4 + 1}"><a href="index.php?p=Home&c=Article&a=index&cate_id={$row.cate_id}">{$row.cate_name}</a></li>
     {/foreach}
     </div>
     <div class="ph_news">
@@ -9,8 +9,8 @@
         <p>点击排行</p>
       </h2>
       <ul class="ph_n">
-        {foreach from=$sortByHits item='row' name='n2'}
-        {if $smarty.foreach.n2.iteration <=3}
+      	{foreach from=$sortByHits item='row' name='n2'}
+      	{if $smarty.foreach.n2.iteration <=3}
         <li><span class="num{$smarty.foreach.n2.iteration}">{$smarty.foreach.n2.iteration}</span><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></li>
         {else}
         <li><span>{$smarty.foreach.n2.iteration}</span><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></li>
@@ -21,7 +21,7 @@
         <p>栏目推荐</p>
       </h2>
       <ul>
-        {foreach from=$sortByRecommend item='row'}
+      	{foreach from=$sortByRecommend item='row'}
         <li><a href="index.php?p=Home&c=Article&a=show&art_id={$row.art_id}">{$row.title}</a></li>
         {/foreach}
       </ul>

@@ -1,5 +1,5 @@
 {include file='../Public/header.html'}
-<script type="text/javascript" src="./App/Back/Public/ckeditor/ckeditor.js"></script>
+<script type="text/javascript" src='/App/Back/Public/ckeditor/ckeditor.js'></script>
 <div class="admin">
   <div class="tab">
     <div class="tab-head"> <strong>文章管理</strong>
@@ -40,9 +40,9 @@
             </div>
             <div class="field">
               <select name="cate_id" class="select">
-              {foreach from=$cateInfo item='row'}
-                <option value="{$row.cate_id}">{$row.cate_name|indent:($row.level*5):'-'}</option>
-              {/foreach}
+              	{foreach from=$cateInfo item='row'}
+				 <option value="{$row.cate_id}">{$row.cate_name|indent:($row.level*5):'-'}</option>
+              	{/foreach}
               </select>
             </div>
           </div>
@@ -59,9 +59,9 @@
               <label for="readme">文章内容</label>
             </div>
             <div class="field">
-              <textarea name="content" id="ckeditor" class="input" rows="8" cols="50" placeholder="请填写文章内容" data-validate="required:请填写文章内容"></textarea>
+              <textarea name="content" id="ckeditor" class="input" rows="8" cols="50"></textarea>
               <script type="text/javascript">
-              CKEDITOR.replace('ckeditor');
+                CKEDITOR.replace('ckeditor');
               </script>
             </div>
           </div>

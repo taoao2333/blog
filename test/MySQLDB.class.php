@@ -1,7 +1,7 @@
 <?php
 
 // MySQLDB类
-class MySQLDB{
+class MySQLDB {
 	private $host;	// 主机地址
 	private $port;	// 端口号
 	private $user;	// 用户名
